@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo"><span>Diego</span></a>
+
+        <ul class="links">
+            <a href="#home">Home</a>            
+            <a href="#skills">Skills</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+        </ul>
+
+        <i class='bx bx-menu' id="menu" onclick="onClick()"></i>
+
+        <a href="#contact" class="btn">Contact Me</a>
+    </nav>
+
+
+    <section id="home">
+        <img src="./elements/yo.png" alt="">
+
+        <div class="info-box">
+            <h1>Hi, It's <span>Diego Orozco</span></h1>
+            <h2>I'm a <span>Software Developer</span></h2>
+            <p>I have a great capability to adapt to different environments and projects.
+                I'm eager to learn new technologies and continue developing my professional skills.
+                My goal is to find a specific area or technology that I am passionate about and
+                focus on it, with the aim of working on my own projects and ideas in the future.
+            </p>
+        </div>
+
+        <div class="btn-box">
+            <a class="btn" href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">Download CV</a>
+            <a class="btn" href="#experience">Experience</a>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <h1><span>Skills</span></h1>
+        <table class="skills-box">            
+            <tr>
+                <td>Problem resolution</td>
+                <td>Advanced English level (B2)</td>
+                <td>Code comprehension</td>
+            </tr>
+            <tr>
+                <td>Teamwork</td>
+                <td>Object-oriented programming</td>
+                <td>Basic data analysis skills</td>
+            </tr>
+            <tr>
+                <td>Fast learner</td>
+                <td>Project management knowledge</td>
+                <td>Great programming logic</td>
+            </tr>
+            <tr>
+                <td>Critical thinking</td>
+                <td>Data structures and algorithms</td>
+                <td>Version control experience</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="experience">
+        <h1><span>Experience</span></h1>
+        <table class="experience-box">            
+            <tr>
+                <th><span>Software Engineer Intern, Jabil</span><h2>May 2022 - Nov. 2022</h2></th>
+                <td><b>Assisted my supervisor</b> with various tasks, either large or small, that he needed to complete but lacked time
+                    for. I reported my progress to him every other day and sought clarification when necessary. Through this
+                    experience, I developed strong skills in <b>self-assessment</b> and <b>independent judgment</b>, learning to focus on
+                    details while keeping the bigger picture in mind.
+                    <p>
+                        • Developed, updated and published Power BI reports, focusing on enhancing visual appeal of graphs
+                        and charts <b>implementing</b> new interactive <b>features</b> and <b>data sources</b>.<br>
+                        • <b>Troubleshot</b> and <b>resolved coding errors</b> in two of the company's web applications, including
+                        simple errors that were fixed right away and complex ones that took weeks to understand the
+                        problem and a couple of days to resolve.<br>
+                        • Created and modified <b>SQL queries</b> to address issues in Power BI reports, like changing data types,
+                        incorporating additional data sources, merging, etc.<br>
+                        • <b>Communicated</b> progress and <b>suggestions</b> about the current project I was working on to leaders of
+                        the corresponding project.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th><span>Assistant at a local store</span><h2>Mar. 2024 - Sept. 2024</h2></th>
+                <td>Responsible for a wide range of tasks including <b>customer service</b>, maintaining store <b>organization</b>
+                    and cleanliness, <b>inventory management</b> and occasionally talking to customers and suppliers.
+                    <p>
+                        • Developed strong customer service skills by <b>addressing</b> diverse <b>client needs</b>, resolving concerns
+                        efficiently, and maintaining <b>composure</b> in challenging situations.<br>
+                        • Demonstrated excellent organizational abilities through precise <b>inventory control</b> and effective
+                        store management.<br>
+                        • Enhanced communication skills through regular interaction with customers and suppliers, while
+                        actively contributing suggestions to <b>improve team performance</b>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="education">
+        <h1><span>Education</span></h1>
+        <table class="education-box">
+            <tr>
+                <td rowspan="2"><b><img src="./elements/tecmilenio.png" alt=""></b></td>
+                <th colspan="2"><b>Software Development Engineering</b></th>
+            </tr>
+            <tr>
+                <td>Tecmilenio University</td>
+                <td>Zapopan, Jalisco</td>
+            </tr>
+        </table>
+        <br>
+        <table class="education-box">
+            <tr>
+                <td rowspan="2"><b><img src="./elements/proulex.png" alt=""></b></td>
+                <th colspan="2"><b>Intensive English Course EPT B2</b></th>
+            </tr>
+            <tr>
+                <td>Proulex Language Center</td>
+                <td>Zapopan, Jalisco</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section id="projects">
+        <h1><span>Projects</span></h1>
+        <div class="projects-box">
+            <div class="project-card">
+                <!--<h2>(Project Name)</h2>-->
+                <img src="./elements/work-in-progress.jpg" alt="">
+                <!--<p>text descriving the project and technologies used</p>-->
+            </div>
+        </div>
+    </section>
+
+
+    <footer id="contact">
+        <div class="column-left">
+            <div class="column-box">
+                <span>
+                    <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
+                        <i class='bx bx-map'></i>
+                    </a>
+                </span>
+                <span>
+                    <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
+                        Zapopan, Mexico
+                    </a>
+                </span>
+            </div>
+    
+            <div class="column-box">
+                <span>
+                    <i class='bx bx-phone'></i>
+                </span>
+                <span>+52 33 3350 5898</span>
+            </div>
+            
+            
+            <div class="column-box">
+                <span>
+                    <a href="mailto:diegoaorozcos@hotmail.com">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:diegoaorozcos@hotmail.com">
+                        diegoaorozcos@hotmail.com
+                    </a>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="column-right">
+            <!--<p>TEXT IN SPANISH
+                Ahora mismo me encuentro desarrollando mis habilidades de programación y aprendiendo tecnologías 
+                para ampliar mi perfil profesional, estoy buscando nuevas oportunidades de trabajo en la industria. 
+                Si estás buscando un desarrollador de software comprometido, no dudes en contactarme.
+            </p>-->
+            <p>
+                I am currently developing my programming skills and learning technologies
+                to expand my professional profile, I am looking for new job opportunities in the industry.
+                If you are looking for a committed software developer, do not hesitate to contact me.
+                Here are some of my socials and a link to my CV.
+            </p>
+    
+            <div class="socials">
+                <span>
+                    <a href="https://www.linkedin.com/in/diego-orozco-t0801/" target="_blank">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                </span>
+
+                <span>
+                    <a href="https://github.com/Diego-Orozco08" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </span>
+
+                <span>
+                    <a href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">
+                        <i class='bx bxs-file-pdf'></i>
+                    </a>
+                </span>
+            </div>
+        </div>  
+    </footer>       
+
+    <script src="script.js"></script>
+</body>
+</html>
