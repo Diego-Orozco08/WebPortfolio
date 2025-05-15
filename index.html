@@ -30,7 +30,9 @@
         <img src="./elements/yo.png" alt="">
 
         <div class="info-box">
-            <h1>Hi, It's <span>Diego Orozco</span></h1>
+            <div class="tooltip"><h1><span>It's Diego Orozco</span></h1>
+                <mark class="tooltiptext">Diego Alejandro Orozco Silva</mark>
+            </div>
             <h2>I'm a <span>Software Developer</span></h2>
             <p>I have a great capability to adapt to different environments and projects.
                 I'm eager to learn new technologies and continue developing my professional skills.
@@ -70,6 +72,11 @@
                 <td>Version control experience</td>
             </tr>
         </table>
+
+        <p>
+            <span><b>Additional Skills:</b></span><br>
+            C++, C#, Python, Java, SQL, HTML, CSS, JavaScript, Power BI, Microsoft 365; Bilingual (Spanish and English).
+        </p>
     </section>
 
 
@@ -153,41 +160,37 @@
 
     <footer id="contact">
         <div class="column-left">
-            <div class="column-box">
-                <span>
-                    <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
-                        <i class='bx bx-map'></i>
-                    </a>
-                </span>
-                <span>
-                    <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
-                        Zapopan, Mexico
-                    </a>
-                </span>
+            <div class="tooltip">
+                <mark class="tooltiptext">Location</mark>
+                <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
+                    <div class="column-box">
+                        <span>
+                            <i class='bx bx-map'></i>
+                        </span>
+                        <span>Zapopan, Mexico</span>
+                    </div>
+                </a>
             </div>
-    
-            <div class="column-box">
+            
+            <div style="display: flex; align-items: center; gap: 1em;">
                 <span>
                     <i class='bx bx-phone'></i>
                 </span>
                 <span>+52 33 3350 5898</span>
             </div>
             
-            
-            <div class="column-box">
-                <span>
-                    <a href="mailto:diegoaorozcos@hotmail.com">
-                        <i class='bx bx-envelope'></i>
-                    </a>
-                </span>
-                <span>
-                    <a href="mailto:diegoaorozcos@hotmail.com">
-                        diegoaorozcos@hotmail.com
-                    </a>
-                </span>
+            <div class="tooltip">
+                <mark class="tooltiptext">Email me</mark>
+                <a href="mailto:diegoaorozcos@hotmail.com">
+                    <div class="column-box">
+                        <span>
+                            <i class='bx bx-envelope'></i>
+                        </span>
+                        <span>diegoaorozcos@hotmail.com</span>
+                    </div>
+                </a>
             </div>
         </div>
-
 
         <div class="column-right">
             <!--<p>TEXT IN SPANISH
@@ -203,23 +206,32 @@
             </p>
     
             <div class="socials">
-                <span>
+                <div class="tooltip">
+                    <mark class="tooltiptext">LinkedIn</mark>
                     <a href="https://www.linkedin.com/in/diego-orozco-t0801/" target="_blank">
-                        <i class='bx bxl-linkedin-square'></i>
+                        <span>
+                            <i class='bx bxl-linkedin-square'></i>
+                        </span>
                     </a>
-                </span>
+                </div>
 
-                <span>
+                <div class="tooltip">
+                    <mark class="tooltiptext">Github</mark>
                     <a href="https://github.com/Diego-Orozco08" target="_blank">
-                        <i class='bx bxl-github'></i>
+                        <span>
+                            <i class='bx bxl-github'></i>
+                        </span>
                     </a>
-                </span>
+                </div>
 
-                <span>
+                <div class="tooltip">
+                    <mark class="tooltiptext">MyCV</mark>
                     <a href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">
-                        <i class='bx bxs-file-pdf'></i>
+                        <span>
+                            <i class='bx bxs-file-pdf'></i>
+                        </span>
                     </a>
-                </span>
+                </div>
             </div>
         </div>  
     </footer>       
