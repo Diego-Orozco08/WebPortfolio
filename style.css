@@ -7,15 +7,18 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-:root{
+:root {
     --background: rgb(25,25,25);
     --second-background: rgb(20,20,20);
+    --text-color: white;
 }
-body{
+body {
     min-height: 100vh;
     background-color: var(--background);
+    color: var(--text-color);
+    overflow-x: hidden;
 }
-nav{
+nav {
     position: fixed;
     top: 0;
     width: 100%;
@@ -27,42 +30,54 @@ nav{
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
-ul{
+nav .logo {
+    font-size: 2em;
+    font-weight: 800;
+    transition: 0.2s ease-in-out;
+}
+nav .logo:hover {
+    opacity: 1;
+}
+nav .logo span:hover {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+                 0 0 50px rgba(255, 255, 255, 0.8);
+}
+nav .links, nav .linksESP {
     display: flex;
     align-items: center;
     gap: 3em;
 }
-nav ul a{
+nav .links a, nav .linksESP a {
     font-size: 1.3em;
     color: white;
     opacity: 0.7;
     transition: 0.2s ease-in-out;
 }
-nav ul a:hover{
+nav .links a:hover, nav .linksESP a:hover {
     opacity: 1;
     text-shadow: 0 0 20px white,
                  0 0 50px white;
 }
-.logo{
-    font-size: 2em;
-    font-weight: 800;
-    opacity: 0.8;
-    transition: 0.2s ease-in-out;
+nav .bx-menu {
+    border: 2px solid transparent;
+    border-radius: 0.25em;
+    display: none;
 }
-.logo:hover{
-    opacity: 1;
-    text-shadow: 0 0 20px orange,
-                 0 0 50px orange;
+nav .bx-menu:hover {
+    border: 2px solid white;
 }
-.btn{
-    padding: 0.5em 1em;
+/* Style for all buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
     color: white;
     background-color: var(--background);
     font-weight: 500;
     letter-spacing: 1px;
-    border-radius: 0.5em;
+    border-radius: 20px;
     font-size: 1.1em;
-    border: 2px solid white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -70,69 +85,71 @@ nav ul a:hover{
     background-color: white;
     color: var(--background);
 }
-span{
-    background: linear-gradient(to right, orangered,yellow);
+span {
+    background: linear-gradient(to right, rgb(24, 125, 25), rgb(255, 204, 0));
     background-clip: text;
     color: transparent;
 }
-#menu{
-    color: white;
+#menu, #menuESP {
     font-size: 3em;
+    color: white;
+    cursor: pointer;
     display: none;
 }
-section{
+section {
     min-height: flex;
     padding: 6% 15%;
+    padding-top: 8em;
 }
-#home{
+#homeLanENG, #homeLanESP {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
     color: white;
+    margin-top: 1em;
 }
-#home img{
-    width: 18vw;
+#homeLanENG img, #homeLanESP img {
+    width: 17vw;
     border-radius: 50%;
-    margin-top: 3em;
 }
-.info-box{
+.info-box {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 0.5em;
+    gap: 1em;
     max-width: 800px;
 }
-.info-box h1{
+.info-box h1 {
     font-size: 4em;
     font-weight: 500;
 }
-.tooltip span{
+.tooltip span {
     position: relative;
     transition: 0.2s ease-in-out;
 }
-.tooltip{
+.tooltip {
     position: relative;
     display: inline-block;
     transition: 0.2s ease-in-out;
 }
-.tooltip span::after{
+.tooltip span::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 1px;
-    background: linear-gradient(to right, orangered, yellow);
+    background: linear-gradient(to right, rgb(24, 125, 25), rgb(245, 245, 15));
 }
-.tooltip span:hover::after{
+.tooltip span:hover::after {
     background: transparent;
 }
-.tooltip span:hover{
+.tooltip span:hover {
     color: white;
 }
-.tooltiptext{
+.tooltiptextENG, .tooltiptextESP {
     visibility: hidden;
     background-color: rgb(200, 200, 200);
     color: black;
@@ -148,31 +165,128 @@ section{
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-.tooltip:hover .tooltiptext{
+.tooltip:hover .tooltiptextENG, .tooltip:hover .tooltiptextESP {
     visibility: visible;
     opacity: 1;
 }
-.info-box h2{
+.info-box h2 {
     font-size: 2em;
     font-weight: 400;
 }
-.info-box p{
+.info-box p {
     font-size: 1.2em;
     opacity: 0.7;
 }
-.btn-box{
+
+/* CV btn and language toggle*/
+.btn-box {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1em;
+    color: white;
+    margin-top: -4vw;
+    margin-bottom: 3em;
 }
-.btn-box .btn:nth-of-type(2){
+.btn-box .btn:nth-of-type(2) {
     background-color: white;
     color: var(--background);
 }
-.btn-box .btn:nth-of-type(2):hover{
+.btn-box .btn:nth-of-type(2):hover {
     background-color: var(--background);
     color: white;
 }
-#skills{
+.language-toggle {
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 21px;
+    backdrop-filter: blur(10px);
+    box-shadow:
+        inset 1px 1px 5px rgba(255, 255, 255, 0.2),
+        inset -1px -1px 7px rgba(0, 0, 0, 0.3),
+                0 4px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    width: fit-content;
+}
+.language-toggle input[type="radio"] {
+    display: none;
+}
+.language-toggle label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    font-size: 1.1em;
+    padding: 0.75rem 1.6rem;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+.language-toggle label:hover {
+    box-shadow: 0 0 5px white;
+    border-radius: 18px;
+    transition: 0.2s ease;
+}
+.glass-radio-group input:checked + label {
+  color: #fff;
+}
+.glass-glider {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(100% / 2);
+    border-radius: 18px;
+    transition:
+        transform 0.5s cubic-bezier(0.3, 1.5, 0.6, 1),
+        box-shadow 0.4s ease-in-out;
+}
+/* Green EN*/
+#glass-green:checked ~ .glass-glider {
+    transform: translateX(0%);
+    background: linear-gradient(135deg, rgb(30, 70, 30), rgb(0, 150, 13));
+    box-shadow:
+        0 0 18px rgb(30, 70, 30),
+        0 0 10px rgba(200, 255, 200, 0.4) inset;
+}
+/* Gold ESP*/
+#glass-gold:checked ~ .glass-glider {
+    transform: translateX(100%);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.333), rgb(255, 204, 0));
+    box-shadow:
+        0 0 18px rgba(255, 215, 0, 0.5),
+        0 0 10px rgba(255, 235, 150, 0.4) inset;
+}
+/* Hide all Spanish content by default */
+body:not(.lang-es) .LanESP,
+body:not(.lang-es) #homeLanESP,
+body:not(.lang-es) #skillsLanESP,
+body:not(.lang-es) #experienceLanESP,
+body:not(.lang-es) #educationLanESP,
+body:not(.lang-es) #projectsLanESP,
+body:not(.lang-es) #contactLanESP {
+    display: none;
+}
+/* Hide all English content when the body has the lang-es class */
+body.lang-es .LanENG,
+body.lang-es #homeLanENG,
+body.lang-es #skillsLanENG,
+body.lang-es #experienceLanENG,
+body.lang-es #educationLanENG,
+body.lang-es #projectsLanENG,
+body.lang-es #contactLanENG {
+    display: none;
+}
+
+#skillsLanENG, #skillsLanESP {
     background-color: var(--second-background);
     display: flex;
     flex-direction: column;
@@ -180,87 +294,88 @@ section{
     justify-content: center;
     gap: 1em;
 }
-#skills h1{
+#skillsLanENG h1, #skillsLanESP h1 {
     font-size: 3em;
     font-weight: 500;
 }
-#skills p{
+#skillsLanENG p, #skillsLanESP p {
     color: white;    
     text-align: justify;
     font-size: 1.2em;
-    opacity: 0.7;
+    opacity: 0.8;
     padding-top: 1em;
 }
-.skills-box{
+.skills-box {
     display: flex;
     text-align: center;
     gap: 2em;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
-.skills-box tr{
+.skills-box tr {
     font-size: 1.3em;
     font-weight: 400;
     color: white;
     opacity: 0.8;
     align-items: baseline;
 }
-.skills-box tr td{
+.skills-box tr td {
     gap: 0.5em;
     color: white;
     padding: 10px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-#experience{
+#experienceLanENG, #experienceLanESP {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0em;
     color: white;
     padding: 6% 10%;
+    padding-top: 8em;
 }
-#experience h1{
+#experienceLanENG h1, #experienceLanESP h1 {
     font-size: 3em;
     font-weight: 500;
 }
-.experience-box{
+.experience-box {
     display: flex;
     flex-direction: column;
     gap: 2em;
 }
-.experience-box tr{
+.experience-box tr {
     vertical-align: top;
     font-weight: 400;
     color: white;
     opacity: 0.9;
     align-items: baseline;
 }
-.experience-box tr th{
+.experience-box tr th {
     font-size: 1.5em;
     gap: 0.5em;
     color: white;
     padding: 20px 0px;
 }
-.experience-box tr th h2{
+.experience-box tr th h2 {
     font-size: 0.65em;
     font-weight: 500;
 }
-.experience-box tr td{
+.experience-box tr td {
     font-size: 1.1em;
     gap: 0.5em;
     color: white;
     padding: 20px 0em 20px 3em;
     text-align: justify;
 }
-.experience-box tr td b{ 
+.experience-box tr td b { 
     opacity: 0.5;
     color: rgb(255, 255, 255);
 }
-.experience-box tr td p{
+.experience-box tr td p {
     padding-left: 3em;
 }
-#education{
+
+#educationLanENG, #educationLanESP {
     background-color: var(--second-background);
     display: flex;
     flex-direction: column;
@@ -269,58 +384,58 @@ section{
     gap: 1em;
     color: white;
 }
-#education h1{
+#educationLanENG h1, #educationLanESP h1 {
     font-size: 3em;
     font-weight: 500;
 }
-#education img{
+#educationLanENG img, #educationLanESP img {
     width: 20vh;
+    border-radius: 0%;
 }
-.education-box{    
+.education-box {    
     text-align: center;
     display: flex;
     gap: 2em;
     border: 1px solid rgba(255, 255, 255, 0.8);
+    min-width: 800px;
 }
-.education-box tr{
-    font-size: 1.2em;
+.education-box tr {
+    font-size: 1.18em;
     font-weight: 400;
     color: white;
     opacity: 0.8;
     align-items: center;
 }  
-.education-box tr th{
+.education-box tr th {
     font-size: 1.5em;
     gap: 0.5em;
-    color: white;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
-.education-box tr td{
+.education-box tr td {
     gap: 0.5em;
-    color: white;
     padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-#projects{
+#projectsLanENG, #projectsLanESP {
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1em;
 }
-#projects h1{
+#projectsLanENG h1, #projectsLanESP h1 {
     font-size: 3em;
     font-weight: 500;
 }
-.projects-box{
+.projects-boxENG, .projects-boxESP {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-items: center;
     gap: 2em 3em;
 }
-.project-card{
+.project-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -333,77 +448,80 @@ section{
     gap: 1em;
     overflow: hidden;
     padding: 1em;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
     transition: 0.2s ease;
 }
-.project-card:hover{
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+.project-card:hover {
+    border: 2px solid rgba(24, 125, 25, 0.8);
+    box-shadow: 0 0 12px rgba(24, 125, 25, 0.8);
     transform: scale(1.02);
 }
-.project-card h2{
+.project-card h2 {
     font-size: 1.5em;
     font-weight: 500;
 }
-.project-card p{
+.project-card p {
     font-size: 1.2em;
 }
-.project-card img{
+.project-card img {
+    width: 100%;
     max-width: 300px;
     border-radius: 0.5em;
     object-fit: cover;
 }
 
-#contact{
+#contactLanENG, #contactLanESP {
     background-color: var(--second-background);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8em;
+    gap: 10em;
     bottom: 0;
     width: 100%;
     padding: 3em 10%;
 }
-.column-left{
+.column-left {
     display: flex;
     flex-direction: column; 
     gap: 1em;
     max-width: 15em;
 }
-.column-left i{
+.column-left i {
     font-size: 2em;
+    padding-top: 10px;
 }
-.column-left span{
+.column-left span {
     font-size: 1.2em;
 }
-.column-box{
+.column-box {
     display: flex;
     align-items: center;
     gap: 1em;
 }
-.column-box:hover span{
+.column-box:hover span {
     color: white;
 }
-/*the first span (the icon) is never showing border at the bottom*/
+/*the first span (the icon) is never showing its border at the bottom*/
 .column-left .tooltip .column-box span:nth-child(1)::after {
     background: transparent;
 }
 .column-left .tooltip .column-box:hover span::after {
     background: transparent;
 }
-.column-right{
+.column-right {
     display: flex;
     flex-direction: column;
     gap: 1em;
     max-width: 40em;
 }
-.column-right p{
+.column-right p {
     text-align: justify;
     color: white;
 }
-.column-right .socials span{
+.column-right .socials span {
     font-size: 2.5em;
 }
-.column-right .socials{
+.column-right .socials {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -413,33 +531,33 @@ section{
 .column-right .tooltip span::after {
     background: transparent;
 }
-.column-right .tooltip .tooltiptext{
+.column-right .tooltip .tooltiptextENG, .column-right .tooltip .tooltiptextESP {
     left: 50%;
 }
-.socials i:hover{
+.socials i:hover {
     color: white;
 }
 
-@media (max-width:1100px){
-    section{
+@media (max-width:1150px) {
+    section {
         padding: 8em 15%;
     }
-    nav .btn{
+    nav .btn {
         display: none;
     }
-    #menu{
+    #menu, #menuESP {
         display: block;
     }
-    .links{
+    nav .links, nav .linksESP {
         display: none;
     }
-    .links a{
+    nav .links a, nav .linksESP a {
         display: block;
         font-size: 1.5em;
         color: white;
     }
-    .links.active{
-        display: block;
+    nav .links.active, nav .linksESP.active {
+        display: flex;
         position: absolute;
         top: 100%;
         right: 0;
@@ -447,104 +565,132 @@ section{
         gap: 1.5em;
         padding: 1em 3em;
         color: white;
-        display: flex;
         flex-direction: column;
         align-items: center;
         background: rgba(15, 15, 15, 0.9);
         backdrop-filter: blur(8px);
     }
+    .btn-box {  
+        margin-top: -6.5em;
+        margin-bottom: 6em;
+    }
 
-    #home h1{
+    #homeLanENG, #homeLanESP {
+        margin-top: 1em;
+    }
+    #homeLanENG h1, #homeLanESP h1 {
         font-size: 3.5em;
     }
-    #home h3{
+    #homeLanENG h3, #homeLanESP h3 {
         font-size: 2em;
     }
-    #home img{
+    #homeLanENG img, #homeLanESP img {        
         width: 24vw;
-        margin-top: 0em;
     }
 
-    #skills tr{
+    #skillsLanENG tr, #skillsLanESP tr {
         font-size: 1em;
     }
+    #skillsLanENG p, #skillsLanESP p {
+        font-size: 1.1em;
+    }
 
-    #experience tr{
+    #experienceLanENG tr, #experienceLanESP tr {
         font-size: 0.85em;
     }
-        
-    .education-box tr{
+
+    .education-box {
+        min-width: fit-content;
+    }
+    .education-box tr {
         font-size: 1.15em;
-    }  
-    .education-box tr th{
+    }
+    .education-box tr th {
         font-size: 1.3em;
     }
 
-    #contact{
+    #contactLanENG, #contactLanESP {
         padding: 3em 5%;
-    }
-    .column-box span{
-        font-size: 1.15em;
+        gap: 8em;
     }
 }
 
 @media (max-width:800px){
-    #home h1{
+    #homeLanENG h1, #homeLanESP h1 {
         font-size: 2.5em;
     }
-    #home h3{
-        font-size: 1.5em;
+    #homeLanENG h2, #homeLanESP h2 {
+        font-size: 1.8em;
     }
-    #home img{
+    #homeLanENG img, #homeLanESP img {
         width: 32vw;
     }
-    #home p{
+    #homeLanENG p, #homeLanESP p {
         font-size: 1.1em;
     }
-    .btn{
+
+    .btn {
         font-size: 1em;
     }
 
-    #skills h1{
+    #skillsLanENG h1, #skillsLanESP h1 {
         font-size: 2.5em;
     }
-    #skills .skills-box{
+    #skillsLanENG .skills-box, #skillsLanESP .skills-box {
         gap: 3em;
     }
 
-    #experience h1{
+    #educationLanENG, #educationLanESP {
+        padding: 8em 10vw;
+    }
+    #experienceLanENG h1, #experienceLanESP h1 {
         font-size: 2.5em;
     }
-    #experience tr{
+    #experienceLanENG tr, #experienceLanESP tr {
         font-size: 0.7em;
     }
    
-    #education h1{
+    #educationLanENG h1, #educationLanESP h1 {
         font-size: 2.5em;
     }
-    #education img{
+    #educationLanENG img, #educationLanESP img {
         width: 22vw;
     }
-    .education-box tr{
+    .education-box tr {
         font-size: 1em;
     }  
-    .education-box tr th{
+    .education-box tr th {
         font-size: 1.2em;
     }
 
-    #projects h1{
+    #projectsLanENG h1, #projectsLanESP h1 {
         font-size: 2.5em;
     }
 
-    #contact{
+    #contactLanENG, #contactLanESP {
         flex-direction: column;
         padding: 3em 15%;
         gap: 2em;
     }
-    #contact .column-left{
+    #contactLanENG .column-left, #contactLanESP .column-left {
         align-items: center;
     }
-    .column-right .socials{
+    .column-left {
+        gap: 0em;
+    }
+    .column-right .socials {
         justify-content: center;
-    }  
+    }
+}
+
+@media (max-width:550px){
+    .btn-box {  
+        flex-direction: column;
+    }
+    #educationLanENG, #educationLanESP {
+        padding: 8em 6vw;
+    }
+    .column-right p {
+        font-size: 0.9em;
+    }
 }

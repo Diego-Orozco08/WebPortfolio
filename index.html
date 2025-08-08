@@ -9,29 +9,45 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <nav>
-        <a href="#" class="logo"><span>Diego</span></a>
+    <nav class="LanENG">
+        <a href="#homeLanENG" class="logo"><span>Diego</span></a>
 
         <ul class="links">
-            <a href="#home">Home</a>            
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
+            <a href="#homeLanENG">Home</a>            
+            <a href="#skillsLanENG">Skills</a>
+            <a href="#experienceLanENG">Experience</a>
+            <a href="#educationLanENG">Education</a>
+            <a href="#projectsLanENG">Projects</a>
         </ul>
 
-        <i class='bx bx-menu' id="menu" onclick="onClick()"></i>
+        <i class='bx bx-menu' id="menu"></i>
 
-        <a href="#contact" class="btn">Contact Me</a>
+        <a href="#contactLanENG" class="btn">Contact Me</a>
+    </nav>
+<!-- ___________________________________________________________________________________________________ -->
+    <nav class="LanESP">
+        <a href="#homeLanESP" class="logo"><span>Diego</span></a>
+
+        <ul class="linksESP">
+            <a href="#homeLanESP">Inicio</a>            
+            <a href="#skillsLanESP">Habilidades</a>
+            <a href="#experienceLanESP">Experiencia</a>
+            <a href="#educationLanESP">Educación</a>
+            <a href="#projectsLanESP">Proyectos</a>
+        </ul>
+
+        <i class='bx bx-menu' id="menuESP"></i>
+
+        <a href="#contactLanESP" class="btn">Contáctame</a>
     </nav>
 
 
-    <section id="home">
-        <img src="./elements/yo.png" alt="">
-
+    <section id="homeLanENG">
+        <img src="./elements/yo.jpg" alt="">
         <div class="info-box">
-            <div class="tooltip"><h1><span>It's Diego Orozco</span></h1>
-                <mark class="tooltiptext">Diego Alejandro Orozco Silva</mark>
+            <div class="tooltip">
+                <h1><span>Diego Orozco</span></h1>
+                <mark class="tooltiptextENG">Diego Alejandro Orozco Silva</mark>
             </div>
             <h2>I'm a <span>Software Developer</span></h2>
             <p>I have a great capability to adapt to different environments and projects.
@@ -40,15 +56,41 @@
                 focus on it, with the aim of working on my own projects and ideas in the future.
             </p>
         </div>
+    </section>
+<!-- ___________________________________________________________________________________________________ -->
+    <section id="homeLanESP">
+        <img src="./elements/yo.jpg" alt="">
+        <div class="info-box">
+            <div class="tooltip">
+                <h1><span>Diego Orozco</span></h1>
+                <mark class="tooltiptextESP">Diego Alejandro Orozco Silva</mark>
+            </div>
 
-        <div class="btn-box">
-            <a class="btn" href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">Download CV</a>
-            <a class="btn" href="#experience">Experience</a>
+            <h2>Soy un <span>desarrollador de software</span></h2>
+            <p>Tengo una gran capacidad para adaptarme a diferentes entornos y proyectos.
+                Me entusiasma aprender nuevas tecnologías y seguir desarrollando mis habilidades profesionales.
+                Mi objetivo es encontrar una área o tecnología específica que me apasione y enfocarme en ella,
+                con el objetivo de trabajar en mis propios proyectos e ideas en el futuro.
+            </p>
         </div>
     </section>
+    <!--LANGUAGE TOGGLE and CV BUTTON--> 
+    <div class="btn-box">
+        <!-- The text on the btn changes depending on the language--> 
+        <a class="btn" id="cvBtn" href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">Download CV</a>
+        <div class="language-toggle">
+            <input type="radio" name="plan" id="glass-green" checked/>
+            <label for="glass-green">English</label>
+
+            <input type="radio" name="plan" id="glass-gold"/>
+            <label for="glass-gold">Español</label>
+
+            <div class="glass-glider"></div>
+        </div>
+    </div>
 
 
-    <section id="skills">
+    <section id="skillsLanENG">
         <h1><span>Skills</span></h1>
         <table class="skills-box">            
             <tr>
@@ -56,16 +98,19 @@
                 <td>Advanced English level (B2)</td>
                 <td>Code comprehension</td>
             </tr>
+
             <tr>
                 <td>Teamwork</td>
                 <td>Object-oriented programming</td>
                 <td>Basic data analysis skills</td>
             </tr>
+
             <tr>
                 <td>Fast learner</td>
                 <td>Project management knowledge</td>
                 <td>Great programming logic</td>
             </tr>
+
             <tr>
                 <td>Critical thinking</td>
                 <td>Data structures and algorithms</td>
@@ -78,14 +123,49 @@
             C++, C#, Python, Java, SQL, HTML, CSS, JavaScript, Power BI, Microsoft 365; Bilingual (Spanish and English).
         </p>
     </section>
+<!-- ___________________________________________________________________________________________________ -->
+    <section id="skillsLanESP">
+        <h1><span>Habilidades</span></h1>
+        <table class="skills-box">
+            <tr>
+                <td>Resolución de problemas</td>
+                <td>Nivel avanzado de inglés (B2)</td>
+                <td>Comprensión de código</td>
+            </tr>
+
+            <tr>
+                <td>Trabajo en equipo</td>
+                <td>Programación orientada a objetos</td>
+                <td>Práctica en análisis de datos</td>
+            </tr>
+
+            <tr>
+                <td>Aprendizaje rápido</td>
+                <td>Conocimientos en gestión de proyectos</td>
+                <td>Buena lógica de programación</td>
+            </tr>
+
+            <tr>
+                <td>Pensamiento critico</td>
+                <td>Estructura de datos y algoritmos</td>
+                <td>Experiencia en control de versiones</td>
+            </tr>
+        </table>
+
+        <p>
+            <span><b>Habilidades adicionales:</b></span><br>
+            C++, C#, Python, Java, SQL, HTML, CSS, JavaScript, Power BI, Microsoft 365; Bilingüe  (español e inglés).
+        </p>
+    </section>
 
 
-    <section id="experience">
+    <section id="experienceLanENG">
         <h1><span>Experience</span></h1>
         <table class="experience-box">            
             <tr>
                 <th><span>Software Engineer Intern, Jabil</span><h2>May 2022 - Nov. 2022</h2></th>
-                <td><b>Assisted my supervisor</b> with various tasks, either large or small, that he needed to complete but lacked time
+                <td>
+                    <b>Assisted my supervisor</b> with various tasks, either large or small, that he needed to complete but lacked time
                     for. I reported my progress to him every other day and sought clarification when necessary. Through this
                     experience, I developed strong skills in <b>self-assessment</b> and <b>independent judgment</b>, learning to focus on
                     details while keeping the bigger picture in mind.
@@ -95,7 +175,7 @@
                         • <b>Troubleshot</b> and <b>resolved coding errors</b> in two of the company's web applications, including
                         simple errors that were fixed right away and complex ones that took weeks to understand the
                         problem and a couple of days to resolve.<br>
-                        • Created and modified <b>SQL queries</b> to address issues in Power BI reports, like changing data types,
+                        • <b>Created</b> and modified <b>SQL queries</b> to address issues in Power BI reports, like changing data types,
                         incorporating additional data sources, merging, etc.<br>
                         • <b>Communicated</b> progress and <b>suggestions</b> about the current project I was working on to leaders of
                         the corresponding project.
@@ -104,7 +184,8 @@
             </tr>
             <tr>
                 <th><span>Assistant at a local store</span><h2>Mar. 2024 - Sept. 2024</h2></th>
-                <td>Responsible for a wide range of tasks including <b>customer service</b>, maintaining store <b>organization</b>
+                <td>
+                    Responsible for a wide range of tasks including <b>customer service</b>, maintaining store <b>organization</b>
                     and cleanliness, <b>inventory management</b> and occasionally talking to customers and suppliers.
                     <p>
                         • Developed strong customer service skills by <b>addressing</b> diverse <b>client needs</b>, resolving concerns
@@ -118,9 +199,50 @@
             </tr>
         </table>
     </section>
+<!-- ___________________________________________________________________________________________________ -->
+    <section id="experienceLanESP">
+        <h1><span>Experiencia</span></h1>
+        <table class="experience-box">            
+            <tr>
+                <th><span>Becario de software, Jabil</span><h2>May 2022 - nov. 2022</h2></th>
+                <td>
+                    <b>Asistí a mi supervisor</b> con diversas tareas, tanto grandes como pequeñas, que necesitaba completar pero
+                    carecía de tiempo. Reporté mi progreso cada dos días y buscaba aclaraciones mutuas cuando era necesario. 
+                    A través de esta experiencia, desarrollé habilidades en <b>autoevaluación</b> y <b>juicio independiente</b>, 
+                    aprendiendo a concentrarme en los detalles mientras mantenía una visión general del proyecto.
+                    <p>
+                        Desarrollé, actualicé y publiqué reportes de Power BI, enfocándome en mejorar la apariencia visual
+                        de gráficos y diagramas e <b>implementar</b> nuevas <b>funciones</b> interactivas y <b>fuentes de datos</b>.<br>
+                        • <b>Identifiqué</b> y <b>resolví errores de código</b> en dos aplicaciones web de la empresa, incluyendo errores
+                        simples que arreglé con facilidad y otros más complejos que tomaban semanas en identificar el
+                        origen del problema y tomaban un par de días en arreglar.<br>
+                        • <b>Creé</b> y modifiqué <b>consultas SQL</b> para resolver problemas en los reportes de Power BI,
+                        como cambiar el tipo de dato, incorporar fuentes de datos o combinarlas.<br>
+                        • <b>Comuniqué</b> mi progreso y <b>sugerencias</b> sobre el proyecto en el me encontrara trabajando a los
+                        líderes correspondientes.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <th><span>Asistente en un local</span><h2>Mar. 2024 - sept. 2024</h2></th>
+                <td>
+                    Fui responsable de una amplia gama de tareas que incluían <b>servicio al cliente</b>, limpieza y <b>organización</b> 
+                    de la tienda, <b>gestión de inventario</b> y comunicación con clientes y proveedores.
+                    <p>
+                        • Desarrollé sólidas habilidades de servicio al cliente al <b>atender</b> diversas <b>necesidades de los
+                        clientes</b>, resolver inquietudes de manera eficiente y <b>mantener la calma</b> en situaciones desafiantes.<br>
+                        • Demostré excelentes habilidades organizativas a través del <b>control</b> preciso <b>de inventario</b> y la
+                        gestión efectiva de la tienda.<br>
+                        • Mejoré mis habilidades de comunicación mediante la interacción regular con clientes y
+                        proveedores, mientras aportaba activamente sugerencias para <b>mejorar el rendimiento del equipo</b>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </section>
 
 
-    <section id="education">
+    <section id="educationLanENG">
         <h1><span>Education</span></h1>
         <table class="education-box">
             <tr>
@@ -128,8 +250,8 @@
                 <th colspan="2"><b>Software Development Engineering</b></th>
             </tr>
             <tr>
-                <td>Tecmilenio University</td>
-                <td>Zapopan, Jalisco</td>
+                <td width="45%">Tecmilenio University</td>
+                <td width="100%">Zapopan, Jalisco</td>
             </tr>
         </table>
         <br>
@@ -139,16 +261,52 @@
                 <th colspan="2"><b>Intensive English Course EPT B2</b></th>
             </tr>
             <tr>
-                <td>Proulex Language Center</td>
-                <td>Zapopan, Jalisco</td>
+                <td width="45%">Proulex Language Center</td>
+                <td width="100%">Zapopan, Jalisco</td>
+            </tr>
+        </table>
+    </section>
+<!-- ___________________________________________________________________________________________________ -->
+    <section id="educationLanESP">
+        <h1><span>Educación</span></h1>
+        <table class="education-box">
+            <tr>
+                <td rowspan="2"><b><img src="./elements/tecmilenio.png" alt=""></b></td>
+                <th colspan="2"><b>Ingeniería en desarrollo de software</b></th>
+            </tr>
+            <tr>
+                <td width="45%">Universidad Tecmilenio</td>
+                <td width="100%">Zapopan, Jalisco</td>
+            </tr>
+        </table>
+        <br>
+        <table class="education-box">
+            <tr>
+                <td rowspan="2"><b><img src="./elements/proulex.png" alt=""></b></td>
+                <th colspan="2"><b>Curso intensivo de inglés EPT B2</b></th>
+            </tr>
+            <tr>
+                <td width="45%">Proulex centro de idiomas</td>
+                <td width="100%">Zapopan, Jalisco</td>
             </tr>
         </table>
     </section>
 
 
-    <section id="projects">
+    <section id="projectsLanENG">
         <h1><span>Projects</span></h1>
-        <div class="projects-box">
+        <div class="projects-boxENG">
+            <div class="project-card">
+                <!--<h2>(Project Name)</h2>-->
+                <img src="./elements/work-in-progress.jpg" alt="">
+                <!--<p>text descriving the project and technologies used</p>-->
+            </div>
+        </div>
+    </section>
+<!-- ___________________________________________________________________________________________________ -->
+    <section id="projectsLanESP">
+        <h1><span>Projects</span></h1>
+        <div class="projects-boxESP">
             <div class="project-card">
                 <!--<h2>(Project Name)</h2>-->
                 <img src="./elements/work-in-progress.jpg" alt="">
@@ -158,10 +316,10 @@
     </section>
 
 
-    <footer id="contact">
+    <footer id="contactLanENG">
         <div class="column-left">
             <div class="tooltip">
-                <mark class="tooltiptext">Location</mark>
+                <mark class="tooltiptextENG">Google Maps</mark>
                 <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
                     <div class="column-box">
                         <span>
@@ -170,17 +328,15 @@
                         <span>Zapopan, Mexico</span>
                     </div>
                 </a>
-            </div>
-            
+            </div>            
             <div style="display: flex; align-items: center; gap: 1em;">
                 <span>
                     <i class='bx bx-phone'></i>
                 </span>
                 <span>+52 33 3350 5898</span>
-            </div>
-            
+            </div>            
             <div class="tooltip">
-                <mark class="tooltiptext">Email me</mark>
+                <mark class="tooltiptextENG">Email me</mark>
                 <a href="mailto:diegoaorozcos@hotmail.com">
                     <div class="column-box">
                         <span>
@@ -193,39 +349,31 @@
         </div>
 
         <div class="column-right">
-            <!--<p>TEXT IN SPANISH
-                Ahora mismo me encuentro desarrollando mis habilidades de programación y aprendiendo tecnologías 
-                para ampliar mi perfil profesional, estoy buscando nuevas oportunidades de trabajo en la industria. 
-                Si estás buscando un desarrollador de software comprometido, no dudes en contactarme.
-            </p>-->
             <p>
                 I am currently developing my programming skills and learning technologies
                 to expand my professional profile, I am looking for new job opportunities in the industry.
                 If you are looking for a committed software developer, do not hesitate to contact me.
                 Here are some of my socials and a link to my CV.
-            </p>
-    
+            </p>    
             <div class="socials">
                 <div class="tooltip">
-                    <mark class="tooltiptext">LinkedIn</mark>
+                    <mark class="tooltiptextENG">LinkedIn</mark>
                     <a href="https://www.linkedin.com/in/diego-orozco-t0801/" target="_blank">
                         <span>
                             <i class='bx bxl-linkedin-square'></i>
                         </span>
                     </a>
                 </div>
-
                 <div class="tooltip">
-                    <mark class="tooltiptext">Github</mark>
+                    <mark class="tooltiptextENG">Github</mark>
                     <a href="https://github.com/Diego-Orozco08" target="_blank">
                         <span>
                             <i class='bx bxl-github'></i>
                         </span>
                     </a>
                 </div>
-
                 <div class="tooltip">
-                    <mark class="tooltiptext">MyCV</mark>
+                    <mark class="tooltiptextENG">CV</mark>
                     <a href="./elements/CV (EN) - Diego Alejandro Orozco Silva.pdf" target="_blank">
                         <span>
                             <i class='bx bxs-file-pdf'></i>
@@ -233,8 +381,75 @@
                     </a>
                 </div>
             </div>
-        </div>  
-    </footer>       
+        </div>
+    </footer>
+    <!-- ___________________________________________________________________________________________________ -->
+    <footer id="contactLanESP">
+        <div class="column-left">
+            <div class="tooltip">
+                <mark class="tooltiptextESP">Google Maps</mark>
+                <a href="https://maps.app.goo.gl/XXN1qu15ypg16pTGA" target="_blank">
+                    <div class="column-box">
+                        <span>
+                            <i class='bx bx-map'></i>
+                        </span>
+                        <span>Zapopan, México</span>
+                    </div>
+                </a>
+            </div>            
+            <div style="display: flex; align-items: center; gap: 1em;">
+                <span>
+                    <i class='bx bx-phone'></i>
+                </span>
+                <span>+52 33 3350 5898</span>
+            </div>            
+            <div class="tooltip">
+                <mark class="tooltiptextESP">Contáctame</mark>
+                <a href="mailto:diegoaorozcos@hotmail.com">
+                    <div class="column-box">
+                        <span>
+                            <i class='bx bx-envelope'></i>
+                        </span>
+                        <span>diegoaorozcos@hotmail.com</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="column-right">
+            <p>
+                Ahora mismo me encuentro desarrollando mis habilidades de programación y aprendiendo tecnologías 
+                para ampliar mi perfil profesional, estoy buscando nuevas oportunidades de trabajo en la industria. 
+                Si estás buscando un desarrollador de software comprometido, no dudes en contactarme.
+            </p>    
+            <div class="socials">
+                <div class="tooltip">
+                    <mark class="tooltiptextESP">LinkedIn</mark>
+                    <a href="https://www.linkedin.com/in/diego-orozco-t0801/" target="_blank">
+                        <span>
+                            <i class='bx bxl-linkedin-square'></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="tooltip">
+                    <mark class="tooltiptextESP">Github</mark>
+                    <a href="https://github.com/Diego-Orozco08" target="_blank">
+                        <span>
+                            <i class='bx bxl-github'></i>
+                        </span>
+                    </a>
+                </div>
+                <div class="tooltip">
+                    <mark class="tooltiptextESP">CV</mark>
+                    <a href="./elements/CV (ESP) - Diego Alejandro Orozco Silva.pdf" target="_blank">
+                        <span>
+                            <i class='bx bxs-file-pdf'></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
